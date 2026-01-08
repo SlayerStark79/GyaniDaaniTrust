@@ -447,6 +447,14 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
+        .video-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         .video-placeholder {
             color: white;
             text-align: center;
@@ -1278,6 +1286,7 @@
                 title: "Choosing Your Niche & Programs",
                 duration: "20 min",
                 level: "Beginner",
+                videoUrl: "",
                 overview: "Master the art of niche selection using the proven 3-part framework: Passion, Profitability, and Positioning. Learn how to validate your niche idea with real market research, discover different types of affiliate programs (Direct, Networks, Marketplaces), and evaluate programs using key criteria like commission structure, cookie duration, and payment terms.",
                 keyTakeaways: [
                     "The 3-part framework for choosing a profitable niche",
@@ -1325,6 +1334,7 @@
                 title: "Building Platform & Creating Content",
                 duration: "20 min",
                 level: "Intermediate",
+                videoUrl: "",
                 overview: "Choose your primary content platform (Blog, YouTube, Instagram, TikTok, Podcast) and learn the strategic hub-and-spoke multi-platform approach. Discover high-converting content types including product reviews, comparisons, tutorials, and best-of lists. Master content creation best practices that build trust and drive conversions, and develop a sustainable content planning system.",
                 keyTakeaways: [
                     "Choosing the right platform based on your strengths",
@@ -1372,6 +1382,7 @@
                 title: "Driving Traffic & Building Audience",
                 duration: "20 min",
                 level: "Intermediate",
+                videoUrl: "",
                 overview: "Master multiple traffic sources including organic search (SEO), platform-specific social media strategies, email list building with compelling lead magnets, and paid advertising basics. Learn how to create sustainable audience growth through consistent traffic generation, authentic relationship building, and strategic content distribution across channels.",
                 keyTakeaways: [
                     "Understanding different traffic sources and their ROI",
@@ -1419,6 +1430,7 @@
                 title: "Optimization & Scaling Your Business",
                 duration: "20 min",
                 level: "Advanced",
+                videoUrl: "",
                 overview: "Learn to track essential metrics and use analytics for data-driven decisions. Master A/B testing strategies for headlines, CTAs, and content structure to improve conversion rates. Discover scaling strategies including diversifying income streams, outsourcing and automation, legal compliance requirements (FTC, GDPR, taxes), and how to build a sustainable, long-term affiliate business.",
                 keyTakeaways: [
                     "Essential metrics to track and analyze for growth",
@@ -1532,9 +1544,16 @@
                     <iframe 
                         src="${video.videoUrl}" 
                         style="width: 100%; height: 100%; border: none; border-radius: 15px;"
-                        allow="autoplay"
-                        allowfullscreen>
+                        allow="autoplay; fullscreen"
+                        allowfullscreen
+                        loading="lazy">
                     </iframe>
+                    <div style="position: absolute; bottom: 20px; right: 20px;">
+                        <button onclick="window.open('${video.videoUrl.replace('/preview', '/view')}', '_blank')" 
+                                style="background: rgba(255,107,53,0.9); color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                            🔗 Open in Google Drive
+                        </button>
+                    </div>
                 `;
             } else {
                 videoPlayer.innerHTML = `
