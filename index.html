@@ -1053,4 +1053,784 @@
                     <h2>📚 Course Curriculum</h2>
                     <button class="collapse-all">Expand All</button>
                 </div>
-                <div id="video-list
+                <div id="video-list"></div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-section">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="#">Home</a>
+                    <span>›</span>
+                    <a href="#">Courses</a>
+                    <span>›</span>
+                    <span>Affiliate Marketing Mastery</span>
+                </div>
+
+                <div class="video-header-section">
+                    <h2 class="video-title-main" id="current-video-title">Introduction to Affiliate Marketing</h2>
+                    <div class="video-meta-main">
+                        <div class="meta-item">
+                            <span>⏱️</span>
+                            <span id="video-duration">20 minutes</span>
+                        </div>
+                        <div class="meta-item">
+                            <span>📊</span>
+                            <span>Video <span id="video-number">1</span> of 5</span>
+                        </div>
+                        <div class="meta-item">
+                            <span>👁️</span>
+                            <span>Beginner Level</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Player -->
+                <div class="video-player" id="video-player">
+                    <!-- Video will be loaded here dynamically -->
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('overview', this)">📋 Overview</button>
+                    <button class="tab" onclick="switchTab('transcript', this)">📝 Transcript</button>
+                    <button class="tab" onclick="switchTab('resources', this)">📦 Resources</button>
+                    <button class="tab" onclick="switchTab('quiz', this)">✅ Quiz</button>
+                    <button class="tab" onclick="switchTab('notes', this)">📓 Notes</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="overview-content" class="tab-content active">
+                    <div class="content-card">
+                        <h3>📚 What You'll Learn in This Video</h3>
+                        <p id="overview-text"></p>
+                        
+                        <div class="highlight-box">
+                            <h4>🎯 Key Takeaways</h4>
+                            <ul id="key-takeaways"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="transcript-content" class="tab-content">
+                    <div class="content-card" id="transcript-text">
+                        <h3>📝 Full Transcript</h3>
+                        <p>Select a video to view its complete transcript...</p>
+                    </div>
+                </div>
+
+                <div id="resources-content" class="tab-content">
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <div class="resource-icon">📄</div>
+                            <h4>Transcript PDF</h4>
+                            <p>Full written transcript of this video lesson</p>
+                            <button class="download-btn" onclick="alert('Download transcript for Video ' + (currentVideo + 1))">Download PDF</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📊</div>
+                            <h4>Presentation Slides</h4>
+                            <p>Visual slides used in this video</p>
+                            <button class="download-btn" onclick="alert('Download slides for Video ' + (currentVideo + 1))">Download Slides</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📝</div>
+                            <h4>Workbook</h4>
+                            <p>Exercises and action items to practice</p>
+                            <button class="download-btn" onclick="alert('Download workbook for Video ' + (currentVideo + 1))">Download Workbook</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">🔗</div>
+                            <h4>Resource Links</h4>
+                            <p>All tools and websites mentioned</p>
+                            <button class="download-btn" onclick="alert('Download resource links for Video ' + (currentVideo + 1))">View Links</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📈</div>
+                            <h4>Templates</h4>
+                            <p>Ready-to-use templates and checklists</p>
+                            <button class="download-btn" onclick="alert('Download templates for Video ' + (currentVideo + 1))">Download Templates</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">💡</div>
+                            <h4>Bonus Materials</h4>
+                            <p>Additional resources and guides</p>
+                            <button class="download-btn" onclick="alert('Download bonus materials for Video ' + (currentVideo + 1))">Download Bonus</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-content" class="tab-content">
+                    <div class="quiz-container" id="quiz-container"></div>
+                </div>
+
+                <div id="notes-content" class="tab-content">
+                    <div class="content-card">
+                        <h3>📓 Your Personal Notes</h3>
+                        <textarea id="personal-notes" style="width: 100%; min-height: 300px; padding: 15px; border: 2px solid #e0e0e0; border-radius: 10px; font-family: inherit; font-size: 1em; resize: vertical;" placeholder="Take notes while watching the video..."></textarea>
+                        <button class="btn btn-primary" style="margin-top: 15px;" onclick="saveNotes()">💾 Save Notes</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousVideo()">
+                        <span>←</span>
+                        <span>Previous Video</span>
+                    </button>
+                    <button class="btn btn-success" id="mark-complete-btn" onclick="markComplete()">
+                        <span>✓</span>
+                        <span>Mark as Complete</span>
+                    </button>
+                    <button class="btn btn-primary" id="next-btn" onclick="nextVideo()">
+                        <span>Next Video</span>
+                        <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certificate-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">×</span>
+            <div class="certificate">
+                <div class="certificate-icon">🏆</div>
+                <h3>Congratulations!</h3>
+                <p>You have successfully completed the</p>
+                <h2 style="margin: 15px 0;">Affiliate Marketing Mastery Course</h2>
+                <p>Awarded by GyaniDaani Trust</p>
+            </div>
+            <button class="btn btn-primary" onclick="downloadCertificate()">
+                <span>📥</span>
+                <span>Download Certificate</span>
+            </button>
+            <button class="btn btn-secondary" onclick="closeModal()" style="margin-top: 10px;">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Course Data
+        const courseData = [
+            {
+                id: 1,
+                title: "Introduction to Affiliate Marketing",
+                duration: "20 min",
+                level: "Beginner",
+                videoUrl: "https://drive.google.com/file/d/1F3VoKcaT3dm0Jx5AJs4Zvcsb9XyerMjH/preview",
+                overview: "Learn the fundamentals of affiliate marketing including what it is, how it works, and why it's an excellent opportunity for students and educators. Understand the three main players (Merchant, Affiliate, Customer), explore different commission models (PPS, PPC, PPL, Recurring), and discover the key success factors that will set you up for long-term profitability.",
+                keyTakeaways: [
+                    "Understanding the affiliate marketing business model",
+                    "The roles of Merchant, Affiliate, and Customer",
+                    "Different commission structures and how they work",
+                    "Why affiliate marketing is perfect for students with limited budgets",
+                    "5 critical success factors to focus on from day one"
+                ],
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What is affiliate marketing?",
+                        options: [
+                            "A performance-based business model where you earn commissions by promoting other companies' products",
+                            "Creating your own products to sell online",
+                            "Running a traditional retail store",
+                            "Only social media advertising"
+                        ],
+                        correct: 0
+                    },
+                    {
+                        question: "Who are the three main players in affiliate marketing?",
+                        options: [
+                            "Buyer, Seller, Platform",
+                            "Merchant, Affiliate, Customer",
+                            "Creator, Marketer, Consumer",
+                            "Brand, Influencer, Follower"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "What does PPS stand for?",
+                        options: [
+                            "Pay Per Service",
+                            "Product Promotion System",
+                            "Pay Per Sale",
+                            "Profit Per Session"
+                        ],
+                        correct: 2
+                    },
+                    {
+                        question: "Which commission model provides ongoing passive income?",
+                        options: [
+                            "Pay Per Click (PPC)",
+                            "Pay Per Sale (PPS)",
+                            "Recurring Commissions",
+                            "Pay Per Lead (PPL)"
+                        ],
+                        correct: 2
+                    }
+                ]
+            },
+            {
+                id: 2,
+                title: "Choosing Your Niche & Programs",
+                duration: "20 min",
+                level: "Beginner",
+                overview: "Master the art of niche selection using the proven 3-part framework: Passion, Profitability, and Positioning. Learn how to validate your niche idea with real market research, discover different types of affiliate programs (Direct, Networks, Marketplaces), and evaluate programs using key criteria like commission structure, cookie duration, and payment terms.",
+                keyTakeaways: [
+                    "The 3-part framework for choosing a profitable niche",
+                    "How to validate your niche before investing time",
+                    "Finding the sweet spot between too broad and too narrow",
+                    "Types of affiliate programs and where to find them",
+                    "Criteria for evaluating affiliate programs professionally"
+                ],
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What are the three parts of the niche selection framework?",
+                        options: [
+                            "Price, Product, Promotion",
+                            "Passion, Profitability, Positioning",
+                            "People, Process, Performance",
+                            "Planning, Production, Publishing"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "Which niche approach is recommended?",
+                        options: [
+                            "As broad as possible to reach everyone",
+                            "As narrow as possible for specialization",
+                            "The sweet spot - not too broad, not too narrow",
+                            "Multiple unrelated niches at once"
+                        ],
+                        correct: 2
+                    },
+                    {
+                        question: "What is a good cookie duration for beginners?",
+                        options: [
+                            "24 hours (like Amazon)",
+                            "30-90 days",
+                            "1 year",
+                            "Cookie duration doesn't matter"
+                        ],
+                        correct: 1
+                    }
+                ]
+            },
+            {
+                id: 3,
+                title: "Building Platform & Creating Content",
+                duration: "20 min",
+                level: "Intermediate",
+                overview: "Choose your primary content platform (Blog, YouTube, Instagram, TikTok, Podcast) and learn the strategic hub-and-spoke multi-platform approach. Discover high-converting content types including product reviews, comparisons, tutorials, and best-of lists. Master content creation best practices that build trust and drive conversions, and develop a sustainable content planning system.",
+                keyTakeaways: [
+                    "Choosing the right platform based on your strengths",
+                    "The hub-and-spoke model for multi-platform presence",
+                    "5 high-converting content types that drive affiliate sales",
+                    "Content creation best practices for authenticity and trust",
+                    "Building a sustainable content calendar and batching system"
+                ],
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What is the hub-and-spoke model?",
+                        options: [
+                            "Your website is the hub, social media are spokes driving traffic to it",
+                            "Social media is the hub, website is a spoke",
+                            "All platforms are equal with no primary platform",
+                            "Focus only on one platform"
+                        ],
+                        correct: 0
+                    },
+                    {
+                        question: "What's the recommended content mix?",
+                        options: [
+                            "100% promotional content",
+                            "50% evergreen, 50% timely",
+                            "80% evergreen, 20% timely",
+                            "All timely trending content"
+                        ],
+                        correct: 2
+                    },
+                    {
+                        question: "Which content type is considered the cornerstone of affiliate marketing?",
+                        options: [
+                            "Social media posts",
+                            "Product reviews with honest pros and cons",
+                            "Generic blog posts",
+                            "Promotional emails"
+                        ],
+                        correct: 1
+                    }
+                ]
+            },
+            {
+                id: 4,
+                title: "Driving Traffic & Building Audience",
+                duration: "20 min",
+                level: "Intermediate",
+                overview: "Master multiple traffic sources including organic search (SEO), platform-specific social media strategies, email list building with compelling lead magnets, and paid advertising basics. Learn how to create sustainable audience growth through consistent traffic generation, authentic relationship building, and strategic content distribution across channels.",
+                keyTakeaways: [
+                    "Understanding different traffic sources and their ROI",
+                    "SEO fundamentals: keyword research, on-page, and technical optimization",
+                    "Platform-specific strategies for Instagram, TikTok, YouTube, and more",
+                    "Building an email list from day one with effective lead magnets",
+                    "When and how to use paid advertising profitably"
+                ],
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What traffic source provides the highest ROI over time?",
+                        options: [
+                            "Paid advertising",
+                            "Social media followers",
+                            "Email marketing",
+                            "Cold outreach"
+                        ],
+                        correct: 2
+                    },
+                    {
+                        question: "When should you start building an email list?",
+                        options: [
+                            "After reaching 10,000 followers",
+                            "From day one of your affiliate journey",
+                            "Only when you have products to sell",
+                            "After making your first affiliate sale"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "What is the primary benefit of organic search traffic (SEO)?",
+                        options: [
+                            "Instant results",
+                            "Free, self-sustaining, and high purchase intent",
+                            "Guaranteed #1 rankings",
+                            "No effort required"
+                        ],
+                        correct: 1
+                    }
+                ]
+            },
+            {
+                id: 5,
+                title: "Optimization & Scaling Your Business",
+                duration: "20 min",
+                level: "Advanced",
+                overview: "Learn to track essential metrics and use analytics for data-driven decisions. Master A/B testing strategies for headlines, CTAs, and content structure to improve conversion rates. Discover scaling strategies including diversifying income streams, outsourcing and automation, legal compliance requirements (FTC, GDPR, taxes), and how to build a sustainable, long-term affiliate business.",
+                keyTakeaways: [
+                    "Essential metrics to track and analyze for growth",
+                    "A/B testing framework to optimize conversion rates",
+                    "Scaling strategies: when to outsource and automate",
+                    "Legal compliance: FTC disclosures, GDPR, and tax obligations",
+                    "Building long-term sustainable success and avoiding burnout"
+                ],
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What should you test in A/B testing?",
+                        options: [
+                            "Multiple variables at once for faster results",
+                            "One variable at a time for clear insights",
+                            "Only colors and fonts",
+                            "Everything randomly"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "When should you consider hiring help or outsourcing?",
+                        options: [
+                            "Immediately when starting out",
+                            "When earning consistent $1,000+/month revenue",
+                            "Never, do everything yourself forever",
+                            "After one successful month"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "What is required by FTC regulations?",
+                        options: [
+                            "No disclosure needed",
+                            "Disclosure only if asked",
+                            "Clear and conspicuous affiliate disclosure near links",
+                            "Disclosure buried in fine print is acceptable"
+                        ],
+                        correct: 2
+                    },
+                    {
+                        question: "What's the best approach to avoid burnout?",
+                        options: [
+                            "Work 24/7 for maximum growth",
+                            "Set realistic schedules, batch content, and take breaks",
+                            "Never take a day off",
+                            "Only work when motivated"
+                        ],
+                        correct: 1
+                    }
+                ]
+            }
+        ];
+
+        // State Management
+        let currentVideo = 0;
+        let completedVideos = new Set();
+        let currentTab = 'overview';
+        let quizAnswers = {};
+        let timeWatched = 0;
+
+        // Initialize
+        function init() {
+            renderVideoList();
+            loadVideo(0);
+            updateProgress();
+            loadSavedProgress();
+            startTimeTracking();
+        }
+
+        // Render Video List
+        function renderVideoList() {
+            const videoList = document.getElementById('video-list');
+            videoList.innerHTML = courseData.map((video, index) => {
+                const isLocked = index > 0 && !completedVideos.has(index - 1);
+                const isCompleted = completedVideos.has(index);
+                const isActive = index === currentVideo;
+                
+                return `
+                    <div class="video-item ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''} ${isLocked ? 'locked' : ''}" 
+                         onclick="${isLocked ? 'alert(\'Complete the previous video to unlock this one!\')' : `loadVideo(${index})`}">
+                        <div class="video-header-content">
+                            <span class="video-number">${video.id}</span>
+                            <div class="video-info">
+                                <div class="video-title">${video.title}</div>
+                                <div class="video-meta">
+                                    <span>⏱️ ${video.duration}</span>
+                                    <span>📊 ${video.level}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Load Video
+        function loadVideo(index) {
+            if (index > 0 && !completedVideos.has(index - 1)) {
+                alert('Please complete the previous video first!');
+                return;
+            }
+
+            currentVideo = index;
+            const video = courseData[index];
+            
+            // Update video player
+            const videoPlayer = document.getElementById('video-player');
+            if (video.videoUrl) {
+                videoPlayer.innerHTML = `
+                    <iframe 
+                        src="${video.videoUrl}" 
+                        style="width: 100%; height: 100%; border: none; border-radius: 15px;"
+                        allow="autoplay"
+                        allowfullscreen>
+                    </iframe>
+                `;
+            } else {
+                videoPlayer.innerHTML = `
+                    <div class="video-placeholder">
+                        <h3>🎬 Video Coming Soon</h3>
+                        <p>Video ${video.id} will be available shortly</p>
+                        <p style="font-size: 0.9em; opacity: 0.7;">
+                            Complete the previous videos and check back soon!
+                        </p>
+                    </div>
+                `;
+            }
+            
+            document.getElementById('current-video-title').textContent = video.title;
+            document.getElementById('video-duration').textContent = video.duration;
+            document.getElementById('video-number').textContent = video.id;
+            document.getElementById('overview-text').textContent = video.overview;
+            
+            // Load key takeaways
+            const takeawaysList = document.getElementById('key-takeaways');
+            takeawaysList.innerHTML = video.keyTakeaways.map(item => `<li>${item}</li>`).join('');
+            
+            // Load saved notes
+            const savedNotes = localStorage.getItem(`notes_video_${video.id}`);
+            document.getElementById('personal-notes').value = savedNotes || '';
+            
+            renderVideoList();
+            renderQuiz();
+            updateButtons();
+            switchTab('overview', document.querySelector('.tab.active'));
+            
+            // Scroll to top
+            document.querySelector('.video-section').scrollTo(0, 0);
+        }
+
+        // Render Quiz
+        function renderQuiz() {
+            const video = courseData[currentVideo];
+            const quizContainer = document.getElementById('quiz-container');
+            
+            if (!video.quiz || video.quiz.length === 0) {
+                quizContainer.innerHTML = '<div class="content-card"><p>No quiz available for this video.</p></div>';
+                return;
+            }
+
+            const hasAnswered = quizAnswers[currentVideo] !== undefined;
+
+            quizContainer.innerHTML = `
+                <div class="quiz-header">
+                    <h3>📝 Test Your Knowledge</h3>
+                    <p>Answer all questions to test your understanding of this video</p>
+                </div>
+                ${video.quiz.map((q, qIndex) => `
+                    <div class="quiz-question">
+                        <span class="question-number">Question ${qIndex + 1} of ${video.quiz.length}</span>
+                        <h4>${q.question}</h4>
+                        <div class="quiz-options">
+                            ${q.options.map((option, oIndex) => `
+                                <div class="quiz-option ${hasAnswered && quizAnswers[currentVideo]?.[qIndex] === oIndex ? 'selected' : ''}" 
+                                     onclick="selectOption(${qIndex}, ${oIndex})" 
+                                     data-question="${qIndex}" 
+                                     data-option="${oIndex}">
+                                    ${String.fromCharCode(65 + oIndex)}. ${option}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('')}
+                <button class="submit-quiz" onclick="submitQuiz()" ${hasAnswered ? 'disabled' : ''}>
+                    ${hasAnswered ? '✓ Quiz Submitted' : 'Submit Quiz'}
+                </button>
+                ${hasAnswered ? '<p style="text-align: center; margin-top: 15px; color: var(--success); font-weight: 600;">Quiz completed! Review your answers above.</p>' : ''}
+            `;
+        }
+
+        // Select Quiz Option
+        function selectOption(questionIndex, optionIndex) {
+            if (quizAnswers[currentVideo]?.[questionIndex] !== undefined) {
+                return; // Already answered
+            }
+            
+            const options = document.querySelectorAll(`[data-question="${questionIndex}"]`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optionIndex].classList.add('selected');
+            
+            if (!quizAnswers[currentVideo]) {
+                quizAnswers[currentVideo] = {};
+            }
+            quizAnswers[currentVideo][questionIndex] = optionIndex;
+        }
+
+        // Submit Quiz
+        function submitQuiz() {
+            const video = courseData[currentVideo];
+            const userAnswers = quizAnswers[currentVideo];
+            
+            if (!userAnswers || Object.keys(userAnswers).length < video.quiz.length) {
+                alert('Please answer all questions before submitting!');
+                return;
+            }
+            
+            let correct = 0;
+            
+            video.quiz.forEach((q, qIndex) => {
+                const selectedOption = userAnswers[qIndex];
+                const options = document.querySelectorAll(`[data-question="${qIndex}"]`);
+                
+                if (selectedOption === q.correct) {
+                    options[selectedOption].classList.add('correct');
+                    correct++;
+                } else {
+                    options[selectedOption].classList.add('incorrect');
+                    options[q.correct].classList.add('correct');
+                }
+            });
+            
+            const score = Math.round((correct / video.quiz.length) * 100);
+            
+            // Update quiz score in progress
+            document.getElementById('quiz-score').textContent = `Quiz: ${score}%`;
+            
+            // Create result display
+            const resultHTML = `
+                <div class="quiz-result">
+                    <h3>🎯 Quiz Results</h3>
+                    <div class="quiz-score">${score}%</div>
+                    <p><strong>${correct} out of ${video.quiz.length}</strong> questions correct</p>
+                    <p>${score >= 70 ? '🎉 Great job! You passed the quiz!' : '📚 Review the material and try again in the next video!'}</p>
+                </div>
+            `;
+            
+            document.getElementById('quiz-container').insertAdjacentHTML('beforeend', resultHTML);
+            document.querySelector('.submit-quiz').disabled = true;
+            document.querySelector('.submit-quiz').textContent = '✓ Quiz Submitted';
+            
+            if (score >= 70) {
+                setTimeout(() => {
+                    if (!completedVideos.has(currentVideo)) {
+                        markComplete();
+                    }
+                }, 2000);
+            }
+            
+            saveProgress();
+        }
+
+        // Switch Tab
+        function switchTab(tabName, element) {
+            currentTab = tabName;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            
+            // Find and activate the clicked tab
+            if (element) {
+                element.classList.add('active');
+            } else {
+                // If no element provided, find by tab name
+                const tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => {
+                    if (tab.textContent.toLowerCase().includes(tabName)) {
+                        tab.classList.add('active');
+                    }
+                });
+            }
+            
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`${tabName}-content`).classList.add('active');
+        }
+
+        // Save Notes
+        function saveNotes() {
+            const notes = document.getElementById('personal-notes').value;
+            const video = courseData[currentVideo];
+            localStorage.setItem(`notes_video_${video.id}`, notes);
+            alert('✅ Notes saved successfully!');
+        }
+
+        // Mark Complete
+        function markComplete() {
+            completedVideos.add(currentVideo);
+            updateProgress();
+            saveProgress();
+            renderVideoList();
+            
+            const completeBtn = document.getElementById('mark-complete-btn');
+            completeBtn.innerHTML = '<span>✓</span><span>Completed</span>';
+            completeBtn.style.background = 'var(--success)';
+            
+            if (completedVideos.size === courseData.length) {
+                setTimeout(() => showCertificate(), 1000);
+            } else {
+                setTimeout(() => {
+                    if (currentVideo < courseData.length - 1) {
+                        nextVideo();
+                    }
+                }, 1500);
+            }
+        }
+
+        // Navigation
+        function nextVideo() {
+            if (currentVideo < courseData.length - 1) {
+                loadVideo(currentVideo + 1);
+            }
+        }
+
+        function previousVideo() {
+            if (currentVideo > 0) {
+                loadVideo(currentVideo - 1);
+            }
+        }
+
+        // Update Buttons
+        function updateButtons() {
+            document.getElementById('prev-btn').disabled = currentVideo === 0;
+            document.getElementById('next-btn').disabled = currentVideo === courseData.length - 1;
+            
+            const isCompleted = completedVideos.has(currentVideo);
+            const completeBtn = document.getElementById('mark-complete-btn');
+            
+            if (isCompleted) {
+                completeBtn.innerHTML = '<span>✓</span><span>Completed</span>';
+                completeBtn.style.background = 'var(--success)';
+            } else {
+                completeBtn.innerHTML = '<span>✓</span><span>Mark as Complete</span>';
+                completeBtn.style.background = '';
+            }
+        }
+
+        // Update Progress
+        function updateProgress() {
+            const progress = Math.round((completedVideos.size / courseData.length) * 100);
+            const progressBar = document.getElementById('progress-bar');
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = progress + '%';
+            
+            document.getElementById('completed-count').textContent = `${completedVideos.size}/${courseData.length} Videos Completed`;
+        }
+
+        // Time Tracking
+        function startTimeTracking() {
+            setInterval(() => {
+                if (document.visibilityState === 'visible') {
+                    timeWatched++;
+                    document.getElementById('time-spent').textContent = `${timeWatched} min watched`;
+                    localStorage.setItem('timeWatched', timeWatched);
+                }
+            }, 60000); // Every minute
+        }
+
+        // Save Progress
+        function saveProgress() {
+            localStorage.setItem('completedVideos', JSON.stringify([...completedVideos]));
+            localStorage.setItem('currentVideo', currentVideo);
+            localStorage.setItem('quizAnswers', JSON.stringify(quizAnswers));
+        }
+
+        // Load Saved Progress
+        function loadSavedProgress() {
+            const saved = localStorage.getItem('completedVideos');
+            if (saved) {
+                completedVideos = new Set(JSON.parse(saved));
+                updateProgress();
+            }
+            
+            const savedQuiz = localStorage.getItem('quizAnswers');
+            if (savedQuiz) {
+                quizAnswers = JSON.parse(savedQuiz);
+            }
+            
+            const savedTime = localStorage.getItem('timeWatched');
+            if (savedTime) {
+                timeWatched = parseInt(savedTime);
+                document.getElementById('time-spent').textContent = `${timeWatched} min watched`;
+            }
+        }
+
+        // Show Certificate
+        function showCertificate() {
+            document.getElementById('certificate-modal').classList.add('active');
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('certificate-modal').classList.remove('active');
+        }
+
+        // Download Certificate
+        function downloadCertificate() {
+            alert('🎉 Certificate download feature!\n\nIn a real implementation, this would:\n1. Generate a PDF certificate with student name\n2. Include GyaniDaani Trust branding\n3. Show completion date and course details\n4. Provide a unique certificate ID\n\nFor now, congratulations on completing the course!');
+        }
+
+        // Initialize on load
+        window.onload = init;
+    </script>
+</body>
+</html>
