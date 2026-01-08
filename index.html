@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GyaniDaani Trust - Affiliate Marketing Mastery</title>
+    <title>Gyani Daani Trust - Empowering Communities</title>
     <style>
         * {
             margin: 0;
@@ -11,1859 +11,444 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #FF6B35;
-            --secondary: #004E89;
-            --accent: #F77F00;
-            --success: #06D6A0;
-            --dark: #1A1A2E;
-            --light: #F8F9FA;
-            --text: #2C3E50;
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        /* Top Navigation Bar */
-        .top-nav {
-            background: var(--dark);
             color: white;
-            padding: 10px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .top-nav-content {
-            max-width: 1400px;
+        nav {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            padding: 0 2rem;
         }
 
         .logo {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: white;
-        }
-
-        .org-info h1 {
-            font-size: 1.5em;
-            margin-bottom: 2px;
-        }
-
-        .org-tagline {
-            font-size: 0.85em;
-            opacity: 0.8;
-            font-style: italic;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
-            align-items: center;
+            gap: 2rem;
+            list-style: none;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+            transition: opacity 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .user-menu {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1400px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-
-        /* Course Header */
-        .course-header {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: white;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .course-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-        }
-
-        .course-header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .course-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .course-title {
-            font-size: 2.8em;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .course-subtitle {
-            font-size: 1.3em;
-            opacity: 0.95;
-            margin-bottom: 25px;
-        }
-
-        .course-stats {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 1em;
-            background: rgba(255,255,255,0.15);
-            padding: 10px 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-
-        /* Progress Section */
-        .progress-section {
-            background: var(--light);
-            padding: 30px 40px;
-            border-bottom: 3px solid var(--primary);
-        }
-
-        .progress-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .progress-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.3em;
-            color: var(--dark);
-        }
-
-        .progress-stats {
-            display: flex;
-            gap: 25px;
-            font-size: 0.95em;
-            color: var(--text);
-        }
-
-        .stat {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .progress-bar-wrapper {
-            width: 100%;
-            height: 35px;
-            background: #e0e0e0;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--success) 0%, var(--primary) 100%);
-            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 20px;
-            color: white;
-            font-weight: bold;
-            font-size: 1em;
-            box-shadow: 0 2px 10px rgba(6, 214, 160, 0.5);
-        }
-
-        /* Main Content Layout */
-        .main-content {
-            display: grid;
-            grid-template-columns: 380px 1fr;
-            min-height: 700px;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            background: var(--light);
-            border-right: 2px solid #e0e0e0;
-            padding: 30px 20px;
-            overflow-y: auto;
-            max-height: 850px;
-        }
-
-        .sidebar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid var(--primary);
-        }
-
-        .sidebar-header h2 {
-            color: var(--dark);
-            font-size: 1.4em;
-        }
-
-        .collapse-all {
-            background: none;
-            border: none;
-            color: var(--primary);
-            cursor: pointer;
-            font-size: 0.9em;
-            font-weight: 600;
-        }
-
-        .video-item {
-            background: white;
-            padding: 18px;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            position: relative;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .video-item:hover {
-            transform: translateX(8px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-            border-color: var(--accent);
-        }
-
-        .video-item.active {
-            border-color: var(--primary);
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-        }
-
-        .video-item.completed::after {
-            content: '✓';
-            position: absolute;
-            right: 18px;
-            top: 18px;
-            width: 28px;
-            height: 28px;
-            background: var(--success);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1em;
-            box-shadow: 0 2px 8px rgba(6, 214, 160, 0.5);
-        }
-
-        .video-item.locked {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .video-item.locked::before {
-            content: '🔒';
-            position: absolute;
-            right: 18px;
-            top: 18px;
-            font-size: 1.2em;
-        }
-
-        .video-header-content {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-
-        .video-number {
-            min-width: 35px;
-            height: 35px;
-            background: var(--primary);
-            color: white;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.95em;
-            flex-shrink: 0;
-        }
-
-        .video-item.active .video-number {
-            background: white;
-            color: var(--primary);
-        }
-
-        .video-info {
-            flex: 1;
-        }
-
-        .video-title {
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 1.05em;
-            line-height: 1.3;
-        }
-
-        .video-meta {
-            display: flex;
-            gap: 15px;
-            font-size: 0.85em;
-            opacity: 0.85;
-        }
-
-        .video-item.active .video-meta {
-            opacity: 1;
-        }
-
-        /* Video Player Section */
-        .video-section {
-            padding: 40px;
-            overflow-y: auto;
-            max-height: 850px;
-        }
-
-        .video-header-section {
-            margin-bottom: 30px;
-        }
-
-        .breadcrumb {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .breadcrumb a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .video-title-main {
-            color: var(--dark);
-            font-size: 2.2em;
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-
-        .video-meta-main {
-            display: flex;
-            gap: 25px;
-            color: var(--text);
-            font-size: 1em;
-            flex-wrap: wrap;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Video Player */
-        .video-player {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #000;
-            border-radius: 15px;
-            margin-bottom: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-        }
-
-        .video-player iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .video-placeholder {
-            color: white;
-            text-align: center;
-            padding: 40px;
-        }
-
-        .video-placeholder h3 {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        .video-placeholder p {
             opacity: 0.8;
-            margin-bottom: 25px;
-            line-height: 1.6;
         }
 
-        .play-button {
-            width: 90px;
-            height: 90px;
-            background: rgba(255, 107, 53, 0.9);
-            border: 4px solid white;
-            border-radius: 50%;
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            text-align: center;
+            min-height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 25px auto;
         }
 
-        .play-button:hover {
-            background: var(--primary);
-            transform: scale(1.15);
-            box-shadow: 0 5px 25px rgba(255, 107, 53, 0.6);
+        .hero-content {
+            max-width: 800px;
         }
 
-        .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 18px 0 18px 30px;
-            border-color: transparent transparent transparent white;
-            margin-left: 8px;
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
         }
 
-        /* Tabs */
-        .tabs {
-            display: flex;
-            gap: 5px;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #e0e0e0;
-            overflow-x: auto;
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.2s backwards;
         }
 
-        .tab {
-            padding: 15px 30px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.05em;
-            color: var(--text);
-            font-weight: 600;
-            border-bottom: 4px solid transparent;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .tab:hover {
-            color: var(--primary);
-            background: rgba(255, 107, 53, 0.05);
-        }
-
-        .tab.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-            background: rgba(255, 107, 53, 0.1);
-        }
-
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Content Sections */
-        .content-card {
-            background: var(--light);
-            padding: 30px;
-            border-radius: 15px;
-            line-height: 1.8;
-            color: var(--text);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .content-card h3 {
-            color: var(--primary);
-            margin-top: 25px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .content-card h4 {
-            color: var(--dark);
-            margin-top: 20px;
-            margin-bottom: 12px;
-            font-size: 1.2em;
-        }
-
-        .content-card ul {
-            margin-left: 25px;
-            margin-top: 10px;
-        }
-
-        .content-card li {
-            margin-bottom: 8px;
-        }
-
-        .highlight-box {
-            background: white;
-            border-left: 4px solid var(--primary);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        /* Resources */
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .resource-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border: 2px solid #e0e0e0;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .resource-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
-        }
-
-        .resource-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        .resource-card h4 {
-            color: var(--dark);
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-
-        .resource-card p {
-            color: var(--text);
-            font-size: 0.95em;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .download-btn {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
-        }
-
-        /* Quiz Section */
-        .quiz-container {
-            background: var(--light);
-            padding: 30px;
-            border-radius: 15px;
-        }
-
-        .quiz-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .quiz-header h3 {
-            color: var(--dark);
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        .quiz-question {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .question-number {
+        .cta-button {
             display: inline-block;
-            background: var(--primary);
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-card h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Impact Section */
+        .impact {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            margin-bottom: 12px;
+            padding: 80px 2rem;
+            text-align: center;
         }
 
-        .quiz-question h4 {
-            color: var(--dark);
-            margin-bottom: 18px;
-            font-size: 1.15em;
-            line-height: 1.5;
+        .impact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
         }
 
-        .quiz-options {
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .programs h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .program-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .program-content {
+            padding: 2rem;
+        }
+
+        .program-content h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f8f9fa;
+            padding: 80px 2rem;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 2rem auto;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 1.5rem;
         }
 
-        .quiz-option {
-            padding: 15px 20px;
-            border: 2px solid #e0e0e0;
+        .contact-item {
+            background: white;
+            padding: 1.5rem;
             border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
-        .quiz-option:hover {
-            border-color: var(--primary);
-            background: rgba(255, 107, 53, 0.05);
-            transform: translateX(5px);
+        .contact-item strong {
+            color: #764ba2;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
-        .quiz-option.selected {
-            border-color: var(--primary);
-            background: rgba(255, 107, 53, 0.15);
-            font-weight: 600;
-        }
-
-        .quiz-option.correct {
-            border-color: var(--success);
-            background: rgba(6, 214, 160, 0.15);
-            font-weight: 600;
-        }
-
-        .quiz-option.incorrect {
-            border-color: #ef4444;
-            background: rgba(239, 68, 68, 0.15);
-        }
-
-        .quiz-result {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: white;
+            padding: 2rem;
             text-align: center;
-            margin-top: 25px;
-            border: 2px solid var(--success);
         }
 
-        .quiz-score {
-            font-size: 3em;
-            color: var(--primary);
-            font-weight: bold;
-            margin: 15px 0;
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .submit-quiz {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1.1em;
-            font-weight: 600;
-            margin-top: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .submit-quiz:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-        }
-
-        .submit-quiz:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        /* Action Buttons */
-        .action-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.05em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-success {
-            background: var(--success);
-            color: white;
-        }
-
-        .btn-success:hover {
-            background: #05c899;
-            box-shadow: 0 5px 20px rgba(6, 214, 160, 0.4);
-        }
-
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        /* Certificate Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            animation: fadeIn 0.3s ease;
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            position: relative;
-            animation: slideUp 0.5s ease;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .close-modal {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            font-size: 2em;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .certificate {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 50px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-        }
-
-        .certificate-icon {
-            font-size: 5em;
-            margin-bottom: 20px;
-        }
-
-        .certificate h3 {
-            font-size: 2.2em;
-            margin-bottom: 15px;
-        }
-
-        .certificate p {
-            font-size: 1.1em;
-            opacity: 0.95;
-            line-height: 1.6;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .main-content {
-                grid-template-columns: 1fr;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-
-            .sidebar {
-                max-height: none;
-                border-right: none;
-                border-bottom: 2px solid #e0e0e0;
-            }
-
-            .course-title {
-                font-size: 2em;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .top-nav-content {
-                padding: 0 20px;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
-            .org-info h1 {
-                font-size: 1.2em;
+            .hero p {
+                font-size: 1.1rem;
             }
 
             .nav-links {
-                display: none;
+                gap: 1rem;
             }
 
-            .course-header {
-                padding: 25px;
+            .about h2, .programs h2, .impact h2, .contact h2 {
+                font-size: 2rem;
             }
-
-            .course-title {
-                font-size: 1.8em;
-            }
-
-            .video-section {
-                padding: 20px;
-            }
-
-            .video-title-main {
-                font-size: 1.6em;
-            }
-
-            .resources-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .action-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent);
         }
     </style>
 </head>
 <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-        <div class="top-nav-content">
-            <div class="logo-section">
-                <div class="logo">GD</div>
-                <div class="org-info">
-                    <h1>GyaniDaani Trust</h1>
-                    <p class="org-tagline">Empowering Through Education</p>
-                </div>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Gyani Daani Trust</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Gyani Daani Trust</h1>
+            <p>Empowering communities through education, support, and sustainable development</p>
+            <a href="#contact" class="cta-button">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Who We Are</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; color: #666;">
+            Gyani Daani Trust is dedicated to creating positive change in communities through compassionate action and sustainable initiatives. We believe in empowering individuals to reach their full potential.
+        </p>
+        <div class="about-content">
+            <div class="about-card">
+                <h3>Our Mission</h3>
+                <p>To create lasting impact through education, empowerment, and community development initiatives that transform lives.</p>
             </div>
-            <div class="nav-links">
-                <a href="#courses">Courses</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+            <div class="about-card">
+                <h3>Our Vision</h3>
+                <p>A world where every individual has access to opportunities that enable them to thrive and contribute to society.</p>
             </div>
-            <div class="user-menu">
-                <span>Welcome, Student</span>
-                <div class="user-avatar" title="User Profile">S</div>
+            <div class="about-card">
+                <h3>Our Values</h3>
+                <p>Compassion, integrity, transparency, and commitment to excellence in everything we do for the community.</p>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Course Header -->
-        <div class="course-header">
-            <div class="course-header-content">
-                <div class="course-badge">🎓 Professional Certificate Course</div>
-                <h2 class="course-title">Affiliate Marketing Mastery</h2>
-                <p class="course-subtitle">Complete 5-Part Video Series for Students & Educators</p>
-                <div class="course-stats">
-                    <div class="stat-item">
-                        <span>🎥</span>
-                        <span>5 Video Lessons</span>
-                    </div>
-                    <div class="stat-item">
-                        <span>⏱️</span>
-                        <span>100 Minutes Total</span>
-                    </div>
-                    <div class="stat-item">
-                        <span>📊</span>
-                        <span>Beginner to Advanced</span>
-                    </div>
-                    <div class="stat-item">
-                        <span>🏆</span>
-                        <span>Certificate on Completion</span>
-                    </div>
-                </div>
+    <!-- Impact Section -->
+    <section id="impact" class="impact">
+        <h2>Our Impact</h2>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Lives Touched</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Communities Served</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Active Programs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Commitment</div>
             </div>
         </div>
+    </section>
 
-        <!-- Progress Section -->
-        <div class="progress-section">
-            <div class="progress-header">
-                <div class="progress-title">
-                    <span>📈</span>
-                    <span>Your Learning Progress</span>
-                </div>
-                <div class="progress-stats">
-                    <div class="stat">
-                        <span>✅</span>
-                        <span id="completed-count">0/5 Videos Completed</span>
-                    </div>
-                    <div class="stat">
-                        <span>⏱️</span>
-                        <span id="time-spent">0 min watched</span>
-                    </div>
-                    <div class="stat">
-                        <span>🎯</span>
-                        <span id="quiz-score">Quiz: --</span>
-                    </div>
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <h2>Our Programs</h2>
+        <div class="program-grid">
+            <div class="program-card">
+                <div class="program-icon">📚</div>
+                <div class="program-content">
+                    <h3>Education Support</h3>
+                    <p>Providing quality education and learning resources to underprivileged children and youth.</p>
                 </div>
             </div>
-            <div class="progress-bar-wrapper">
-                <div class="progress-bar-fill" id="progress-bar" style="width: 0%">0%</div>
+            <div class="program-card">
+                <div class="program-icon">🤝</div>
+                <div class="program-content">
+                    <h3>Community Development</h3>
+                    <p>Building stronger communities through collaborative initiatives and sustainable programs.</p>
+                </div>
             </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <div class="sidebar-header">
-                    <h2>📚 Course Curriculum</h2>
-                    <button class="collapse-all">Expand All</button>
+            <div class="program-card">
+                <div class="program-icon">💡</div>
+                <div class="program-content">
+                    <h3>Skill Training</h3>
+                    <p>Empowering individuals with practical skills and vocational training for better livelihoods.</p>
                 </div>
-                <div id="video-list"></div>
             </div>
-
-            <!-- Video Section -->
-            <div class="video-section">
-                <!-- Breadcrumb -->
-                <div class="breadcrumb">
-                    <a href="#">Home</a>
-                    <span>›</span>
-                    <a href="#">Courses</a>
-                    <span>›</span>
-                    <span>Affiliate Marketing Mastery</span>
-                </div>
-
-                <div class="video-header-section">
-                    <h2 class="video-title-main" id="current-video-title">Introduction to Affiliate Marketing</h2>
-                    <div class="video-meta-main">
-                        <div class="meta-item">
-                            <span>⏱️</span>
-                            <span id="video-duration">20 minutes</span>
-                        </div>
-                        <div class="meta-item">
-                            <span>📊</span>
-                            <span>Video <span id="video-number">1</span> of 5</span>
-                        </div>
-                        <div class="meta-item">
-                            <span>👁️</span>
-                            <span>Beginner Level</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video Player -->
-                <div class="video-player" id="video-player">
-                    <!-- Video will be loaded here dynamically -->
-                </div>
-
-                <!-- Tabs -->
-                <div class="tabs">
-                    <button class="tab active" onclick="switchTab('overview', this)">📋 Overview</button>
-                    <button class="tab" onclick="switchTab('transcript', this)">📝 Transcript</button>
-                    <button class="tab" onclick="switchTab('resources', this)">📦 Resources</button>
-                    <button class="tab" onclick="switchTab('quiz', this)">✅ Quiz</button>
-                    <button class="tab" onclick="switchTab('notes', this)">📓 Notes</button>
-                </div>
-
-                <!-- Tab Content -->
-                <div id="overview-content" class="tab-content active">
-                    <div class="content-card">
-                        <h3>📚 What You'll Learn in This Video</h3>
-                        <p id="overview-text"></p>
-                        
-                        <div class="highlight-box">
-                            <h4>🎯 Key Takeaways</h4>
-                            <ul id="key-takeaways"></ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="transcript-content" class="tab-content">
-                    <div class="content-card" id="transcript-text">
-                        <h3>📝 Full Transcript</h3>
-                        <p>Select a video to view its complete transcript...</p>
-                    </div>
-                </div>
-
-                <div id="resources-content" class="tab-content">
-                    <div class="resources-grid">
-                        <div class="resource-card">
-                            <div class="resource-icon">📄</div>
-                            <h4>Transcript PDF</h4>
-                            <p>Full written transcript of this video lesson</p>
-                            <button class="download-btn" onclick="alert('Download transcript for Video ' + (currentVideo + 1))">Download PDF</button>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">📊</div>
-                            <h4>Presentation Slides</h4>
-                            <p>Visual slides used in this video</p>
-                            <button class="download-btn" onclick="alert('Download slides for Video ' + (currentVideo + 1))">Download Slides</button>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">📝</div>
-                            <h4>Workbook</h4>
-                            <p>Exercises and action items to practice</p>
-                            <button class="download-btn" onclick="alert('Download workbook for Video ' + (currentVideo + 1))">Download Workbook</button>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">🔗</div>
-                            <h4>Resource Links</h4>
-                            <p>All tools and websites mentioned</p>
-                            <button class="download-btn" onclick="alert('Download resource links for Video ' + (currentVideo + 1))">View Links</button>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">📈</div>
-                            <h4>Templates</h4>
-                            <p>Ready-to-use templates and checklists</p>
-                            <button class="download-btn" onclick="alert('Download templates for Video ' + (currentVideo + 1))">Download Templates</button>
-                        </div>
-                        <div class="resource-card">
-                            <div class="resource-icon">💡</div>
-                            <h4>Bonus Materials</h4>
-                            <p>Additional resources and guides</p>
-                            <button class="download-btn" onclick="alert('Download bonus materials for Video ' + (currentVideo + 1))">Download Bonus</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="quiz-content" class="tab-content">
-                    <div class="quiz-container" id="quiz-container"></div>
-                </div>
-
-                <div id="notes-content" class="tab-content">
-                    <div class="content-card">
-                        <h3>📓 Your Personal Notes</h3>
-                        <textarea id="personal-notes" style="width: 100%; min-height: 300px; padding: 15px; border: 2px solid #e0e0e0; border-radius: 10px; font-family: inherit; font-size: 1em; resize: vertical;" placeholder="Take notes while watching the video..."></textarea>
-                        <button class="btn btn-primary" style="margin-top: 15px;" onclick="saveNotes()">💾 Save Notes</button>
-                    </div>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="action-buttons">
-                    <button class="btn btn-secondary" id="prev-btn" onclick="previousVideo()">
-                        <span>←</span>
-                        <span>Previous Video</span>
-                    </button>
-                    <button class="btn btn-success" id="mark-complete-btn" onclick="markComplete()">
-                        <span>✓</span>
-                        <span>Mark as Complete</span>
-                    </button>
-                    <button class="btn btn-primary" id="next-btn" onclick="nextVideo()">
-                        <span>Next Video</span>
-                        <span>→</span>
-                    </button>
+            <div class="program-card">
+                <div class="program-icon">❤️</div>
+                <div class="program-content">
+                    <h3>Social Welfare</h3>
+                    <p>Supporting vulnerable communities with essential resources and care services.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Certificate Modal -->
-    <div class="modal" id="certificate-modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">×</span>
-            <div class="certificate">
-                <div class="certificate-icon">🏆</div>
-                <h3>Congratulations!</h3>
-                <p>You have successfully completed the</p>
-                <h2 style="margin: 15px 0;">Affiliate Marketing Mastery Course</h2>
-                <p>Awarded by GyaniDaani Trust</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+            Join us in making a difference. Your support can change lives.
+        </p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Email</strong>
+                info@gyanidaanitrust.org
             </div>
-            <button class="btn btn-primary" onclick="downloadCertificate()">
-                <span>📥</span>
-                <span>Download Certificate</span>
-            </button>
-            <button class="btn btn-secondary" onclick="closeModal()" style="margin-top: 10px;">
-                Close
-            </button>
+            <div class="contact-item">
+                <strong>Phone</strong>
+                +91 XXXXX XXXXX
+            </div>
+            <div class="contact-item">
+                <strong>Address</strong>
+                [Your Trust Address]<br>
+                [City, State, PIN Code]
+            </div>
+            <div class="contact-item">
+                <strong>Registration Details</strong>
+                80G & 12A Registered Trust
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        // Course Data
-        const courseData = [
-            {
-                id: 1,
-                title: "Introduction to Affiliate Marketing",
-                duration: "20 min",
-                level: "Beginner",
-                videoUrl: "https://drive.google.com/file/d/1F3VoKcaT3dm0Jx5AJs4Zvcsb9XyerMjH/preview",
-                overview: "Learn the fundamentals of affiliate marketing including what it is, how it works, and why it's an excellent opportunity for students and educators. Understand the three main players (Merchant, Affiliate, Customer), explore different commission models (PPS, PPC, PPL, Recurring), and discover the key success factors that will set you up for long-term profitability.",
-                keyTakeaways: [
-                    "Understanding the affiliate marketing business model",
-                    "The roles of Merchant, Affiliate, and Customer",
-                    "Different commission structures and how they work",
-                    "Why affiliate marketing is perfect for students with limited budgets",
-                    "5 critical success factors to focus on from day one"
-                ],
-                quiz: [
-                    {
-                        question: "What is affiliate marketing?",
-                        options: [
-                            "A performance-based business model where you earn commissions by promoting other companies' products",
-                            "Creating your own products to sell online",
-                            "Running a traditional retail store",
-                            "Only social media advertising"
-                        ],
-                        correct: 0
-                    },
-                    {
-                        question: "Who are the three main players in affiliate marketing?",
-                        options: [
-                            "Buyer, Seller, Platform",
-                            "Merchant, Affiliate, Customer",
-                            "Creator, Marketer, Consumer",
-                            "Brand, Influencer, Follower"
-                        ],
-                        correct: 1
-                    },
-                    {
-                        question: "What does PPS stand for?",
-                        options: [
-                            "Pay Per Service",
-                            "Product Promotion System",
-                            "Pay Per Sale",
-                            "Profit Per Session"
-                        ],
-                        correct: 2
-                    },
-                    {
-                        question: "Which commission model provides ongoing passive income?",
-                        options: [
-                            "Pay Per Click (PPC)",
-                            "Pay Per Sale (PPS)",
-                            "Recurring Commissions",
-                            "Pay Per Lead (PPL)"
-                        ],
-                        correct: 2
-                    }
-                ]
-            },
-            {
-                id: 2,
-                title: "Choosing Your Niche & Programs",
-                duration: "20 min",
-                level: "Beginner",
-                videoUrl: "",
-                overview: "Master the art of niche selection using the proven 3-part framework: Passion, Profitability, and Positioning. Learn how to validate your niche idea with real market research, discover different types of affiliate programs (Direct, Networks, Marketplaces), and evaluate programs using key criteria like commission structure, cookie duration, and payment terms.",
-                keyTakeaways: [
-                    "The 3-part framework for choosing a profitable niche",
-                    "How to validate your niche before investing time",
-                    "Finding the sweet spot between too broad and too narrow",
-                    "Types of affiliate programs and where to find them",
-                    "Criteria for evaluating affiliate programs professionally"
-                ],
-                videoUrl: "",
-                quiz: [
-                    {
-                        question: "What are the three parts of the niche selection framework?",
-                        options: [
-                            "Price, Product, Promotion",
-                            "Passion, Profitability, Positioning",
-                            "People, Process, Performance",
-                            "Planning, Production, Publishing"
-                        ],
-                        correct: 1
-                    },
-                    {
-                        question: "Which niche approach is recommended?",
-                        options: [
-                            "As broad as possible to reach everyone",
-                            "As narrow as possible for specialization",
-                            "The sweet spot - not too broad, not too narrow",
-                            "Multiple unrelated niches at once"
-                        ],
-                        correct: 2
-                    },
-                    {
-                        question: "What is a good cookie duration for beginners?",
-                        options: [
-                            "24 hours (like Amazon)",
-                            "30-90 days",
-                            "1 year",
-                            "Cookie duration doesn't matter"
-                        ],
-                        correct: 1
-                    }
-                ]
-            },
-            {
-                id: 3,
-                title: "Building Platform & Creating Content",
-                duration: "20 min",
-                level: "Intermediate",
-                videoUrl: "",
-                overview: "Choose your primary content platform (Blog, YouTube, Instagram, TikTok, Podcast) and learn the strategic hub-and-spoke multi-platform approach. Discover high-converting content types including product reviews, comparisons, tutorials, and best-of lists. Master content creation best practices that build trust and drive conversions, and develop a sustainable content planning system.",
-                keyTakeaways: [
-                    "Choosing the right platform based on your strengths",
-                    "The hub-and-spoke model for multi-platform presence",
-                    "5 high-converting content types that drive affiliate sales",
-                    "Content creation best practices for authenticity and trust",
-                    "Building a sustainable content calendar and batching system"
-                ],
-                videoUrl: "",
-                quiz: [
-                    {
-                        question: "What is the hub-and-spoke model?",
-                        options: [
-                            "Your website is the hub, social media are spokes driving traffic to it",
-                            "Social media is the hub, website is a spoke",
-                            "All platforms are equal with no primary platform",
-                            "Focus only on one platform"
-                        ],
-                        correct: 0
-                    },
-                    {
-                        question: "What's the recommended content mix?",
-                        options: [
-                            "100% promotional content",
-                            "50% evergreen, 50% timely",
-                            "80% evergreen, 20% timely",
-                            "All timely trending content"
-                        ],
-                        correct: 2
-                    },
-                    {
-                        question: "Which content type is considered the cornerstone of affiliate marketing?",
-                        options: [
-                            "Social media posts",
-                            "Product reviews with honest pros and cons",
-                            "Generic blog posts",
-                            "Promotional emails"
-                        ],
-                        correct: 1
-                    }
-                ]
-            },
-            {
-                id: 4,
-                title: "Driving Traffic & Building Audience",
-                duration: "20 min",
-                level: "Intermediate",
-                videoUrl: "",
-                overview: "Master multiple traffic sources including organic search (SEO), platform-specific social media strategies, email list building with compelling lead magnets, and paid advertising basics. Learn how to create sustainable audience growth through consistent traffic generation, authentic relationship building, and strategic content distribution across channels.",
-                keyTakeaways: [
-                    "Understanding different traffic sources and their ROI",
-                    "SEO fundamentals: keyword research, on-page, and technical optimization",
-                    "Platform-specific strategies for Instagram, TikTok, YouTube, and more",
-                    "Building an email list from day one with effective lead magnets",
-                    "When and how to use paid advertising profitably"
-                ],
-                videoUrl: "",
-                quiz: [
-                    {
-                        question: "What traffic source provides the highest ROI over time?",
-                        options: [
-                            "Paid advertising",
-                            "Social media followers",
-                            "Email marketing",
-                            "Cold outreach"
-                        ],
-                        correct: 2
-                    },
-                    {
-                        question: "When should you start building an email list?",
-                        options: [
-                            "After reaching 10,000 followers",
-                            "From day one of your affiliate journey",
-                            "Only when you have products to sell",
-                            "After making your first affiliate sale"
-                        ],
-                        correct: 1
-                    },
-                    {
-                        question: "What is the primary benefit of organic search traffic (SEO)?",
-                        options: [
-                            "Instant results",
-                            "Free, self-sustaining, and high purchase intent",
-                            "Guaranteed #1 rankings",
-                            "No effort required"
-                        ],
-                        correct: 1
-                    }
-                ]
-            },
-            {
-                id: 5,
-                title: "Optimization & Scaling Your Business",
-                duration: "20 min",
-                level: "Advanced",
-                videoUrl: "",
-                overview: "Learn to track essential metrics and use analytics for data-driven decisions. Master A/B testing strategies for headlines, CTAs, and content structure to improve conversion rates. Discover scaling strategies including diversifying income streams, outsourcing and automation, legal compliance requirements (FTC, GDPR, taxes), and how to build a sustainable, long-term affiliate business.",
-                keyTakeaways: [
-                    "Essential metrics to track and analyze for growth",
-                    "A/B testing framework to optimize conversion rates",
-                    "Scaling strategies: when to outsource and automate",
-                    "Legal compliance: FTC disclosures, GDPR, and tax obligations",
-                    "Building long-term sustainable success and avoiding burnout"
-                ],
-                videoUrl: "",
-                quiz: [
-                    {
-                        question: "What should you test in A/B testing?",
-                        options: [
-                            "Multiple variables at once for faster results",
-                            "One variable at a time for clear insights",
-                            "Only colors and fonts",
-                            "Everything randomly"
-                        ],
-                        correct: 1
-                    },
-                    {
-                        question: "When should you consider hiring help or outsourcing?",
-                        options: [
-                            "Immediately when starting out",
-                            "When earning consistent $1,000+/month revenue",
-                            "Never, do everything yourself forever",
-                            "After one successful month"
-                        ],
-                        correct: 1
-                    },
-                    {
-                        question: "What is required by FTC regulations?",
-                        options: [
-                            "No disclosure needed",
-                            "Disclosure only if asked",
-                            "Clear and conspicuous affiliate disclosure near links",
-                            "Disclosure buried in fine print is acceptable"
-                        ],
-                        correct: 2
-                    },
-                    {
-                        question: "What's the best approach to avoid burnout?",
-                        options: [
-                            "Work 24/7 for maximum growth",
-                            "Set realistic schedules, batch content, and take breaks",
-                            "Never take a day off",
-                            "Only work when motivated"
-                        ],
-                        correct: 1
-                    }
-                ]
-            }
-        ];
-
-        // State Management
-        let currentVideo = 0;
-        let completedVideos = new Set();
-        let currentTab = 'overview';
-        let quizAnswers = {};
-        let timeWatched = 0;
-
-        // Initialize
-        function init() {
-            renderVideoList();
-            loadVideo(0);
-            updateProgress();
-            loadSavedProgress();
-            startTimeTracking();
-        }
-
-        // Render Video List
-        function renderVideoList() {
-            const videoList = document.getElementById('video-list');
-            videoList.innerHTML = courseData.map((video, index) => {
-                const isLocked = index > 0 && !completedVideos.has(index - 1);
-                const isCompleted = completedVideos.has(index);
-                const isActive = index === currentVideo;
-                
-                return `
-                    <div class="video-item ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''} ${isLocked ? 'locked' : ''}" 
-                         onclick="${isLocked ? 'alert(\'Complete the previous video to unlock this one!\')' : `loadVideo(${index})`}">
-                        <div class="video-header-content">
-                            <span class="video-number">${video.id}</span>
-                            <div class="video-info">
-                                <div class="video-title">${video.title}</div>
-                                <div class="video-meta">
-                                    <span>⏱️ ${video.duration}</span>
-                                    <span>📊 ${video.level}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        // Load Video
-        function loadVideo(index) {
-            if (index > 0 && !completedVideos.has(index - 1)) {
-                alert('Please complete the previous video first!');
-                return;
-            }
-
-            currentVideo = index;
-            const video = courseData[index];
-            
-            console.log('Loading video:', video.id, 'URL:', video.videoUrl); // Debug log
-            
-            // Update video player
-            const videoPlayer = document.getElementById('video-player');
-            if (video.videoUrl && video.videoUrl.trim() !== '') {
-                console.log('Video URL found, embedding iframe'); // Debug log
-                videoPlayer.innerHTML = `
-                    <iframe 
-                        src="${video.videoUrl}" 
-                        style="width: 100%; height: 100%; border: none; border-radius: 15px;"
-                        allow="autoplay; fullscreen"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                `;
-                
-                // Add open in Drive button after a delay to ensure iframe loads
-                setTimeout(() => {
-                    const existingButton = videoPlayer.querySelector('.drive-button');
-                    if (!existingButton) {
-                        const button = document.createElement('div');
-                        button.className = 'drive-button';
-                        button.style.cssText = 'position: absolute; bottom: 20px; right: 20px; z-index: 10;';
-                        button.innerHTML = `
-                            <button onclick="window.open('${video.videoUrl.replace('/preview', '/view')}', '_blank')" 
-                                    style="background: rgba(255,107,53,0.9); color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-                                🔗 Open in Google Drive
-                            </button>
-                        `;
-                        videoPlayer.appendChild(button);
-                    }
-                }, 500);
-            } else {
-                console.log('No video URL, showing placeholder'); // Debug log
-                videoPlayer.innerHTML = `
-                    <div class="video-placeholder">
-                        <h3>🎬 Video Coming Soon</h3>
-                        <p>Video ${video.id} will be available shortly</p>
-                        <p style="font-size: 0.9em; opacity: 0.7;">
-                            Complete the previous videos and check back soon!
-                        </p>
-                    </div>
-                `;
-            }
-            
-            document.getElementById('current-video-title').textContent = video.title;
-            document.getElementById('video-duration').textContent = video.duration;
-            document.getElementById('video-number').textContent = video.id;
-            document.getElementById('overview-text').textContent = video.overview;
-            
-            // Load key takeaways
-            const takeawaysList = document.getElementById('key-takeaways');
-            takeawaysList.innerHTML = video.keyTakeaways.map(item => `<li>${item}</li>`).join('');
-            
-            // Load saved notes
-            const savedNotes = localStorage.getItem(`notes_video_${video.id}`);
-            document.getElementById('personal-notes').value = savedNotes || '';
-            
-            renderVideoList();
-            renderQuiz();
-            updateButtons();
-            switchTab('overview', document.querySelector('.tab.active'));
-            
-            // Scroll to top
-            document.querySelector('.video-section').scrollTo(0, 0);
-        }
-
-        // Render Quiz
-        function renderQuiz() {
-            const video = courseData[currentVideo];
-            const quizContainer = document.getElementById('quiz-container');
-            
-            if (!video.quiz || video.quiz.length === 0) {
-                quizContainer.innerHTML = '<div class="content-card"><p>No quiz available for this video.</p></div>';
-                return;
-            }
-
-            const hasAnswered = quizAnswers[currentVideo] !== undefined;
-
-            quizContainer.innerHTML = `
-                <div class="quiz-header">
-                    <h3>📝 Test Your Knowledge</h3>
-                    <p>Answer all questions to test your understanding of this video</p>
-                </div>
-                ${video.quiz.map((q, qIndex) => `
-                    <div class="quiz-question">
-                        <span class="question-number">Question ${qIndex + 1} of ${video.quiz.length}</span>
-                        <h4>${q.question}</h4>
-                        <div class="quiz-options">
-                            ${q.options.map((option, oIndex) => `
-                                <div class="quiz-option ${hasAnswered && quizAnswers[currentVideo]?.[qIndex] === oIndex ? 'selected' : ''}" 
-                                     onclick="selectOption(${qIndex}, ${oIndex})" 
-                                     data-question="${qIndex}" 
-                                     data-option="${oIndex}">
-                                    ${String.fromCharCode(65 + oIndex)}. ${option}
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `).join('')}
-                <button class="submit-quiz" onclick="submitQuiz()" ${hasAnswered ? 'disabled' : ''}>
-                    ${hasAnswered ? '✓ Quiz Submitted' : 'Submit Quiz'}
-                </button>
-                ${hasAnswered ? '<p style="text-align: center; margin-top: 15px; color: var(--success); font-weight: 600;">Quiz completed! Review your answers above.</p>' : ''}
-            `;
-        }
-
-        // Select Quiz Option
-        function selectOption(questionIndex, optionIndex) {
-            if (quizAnswers[currentVideo]?.[questionIndex] !== undefined) {
-                return; // Already answered
-            }
-            
-            const options = document.querySelectorAll(`[data-question="${questionIndex}"]`);
-            options.forEach(opt => opt.classList.remove('selected'));
-            options[optionIndex].classList.add('selected');
-            
-            if (!quizAnswers[currentVideo]) {
-                quizAnswers[currentVideo] = {};
-            }
-            quizAnswers[currentVideo][questionIndex] = optionIndex;
-        }
-
-        // Submit Quiz
-        function submitQuiz() {
-            const video = courseData[currentVideo];
-            const userAnswers = quizAnswers[currentVideo];
-            
-            if (!userAnswers || Object.keys(userAnswers).length < video.quiz.length) {
-                alert('Please answer all questions before submitting!');
-                return;
-            }
-            
-            let correct = 0;
-            
-            video.quiz.forEach((q, qIndex) => {
-                const selectedOption = userAnswers[qIndex];
-                const options = document.querySelectorAll(`[data-question="${qIndex}"]`);
-                
-                if (selectedOption === q.correct) {
-                    options[selectedOption].classList.add('correct');
-                    correct++;
-                } else {
-                    options[selectedOption].classList.add('incorrect');
-                    options[q.correct].classList.add('correct');
-                }
-            });
-            
-            const score = Math.round((correct / video.quiz.length) * 100);
-            
-            // Update quiz score in progress
-            document.getElementById('quiz-score').textContent = `Quiz: ${score}%`;
-            
-            // Create result display
-            const resultHTML = `
-                <div class="quiz-result">
-                    <h3>🎯 Quiz Results</h3>
-                    <div class="quiz-score">${score}%</div>
-                    <p><strong>${correct} out of ${video.quiz.length}</strong> questions correct</p>
-                    <p>${score >= 70 ? '🎉 Great job! You passed the quiz!' : '📚 Review the material and try again in the next video!'}</p>
-                </div>
-            `;
-            
-            document.getElementById('quiz-container').insertAdjacentHTML('beforeend', resultHTML);
-            document.querySelector('.submit-quiz').disabled = true;
-            document.querySelector('.submit-quiz').textContent = '✓ Quiz Submitted';
-            
-            if (score >= 70) {
-                setTimeout(() => {
-                    if (!completedVideos.has(currentVideo)) {
-                        markComplete();
-                    }
-                }, 2000);
-            }
-            
-            saveProgress();
-        }
-
-        // Switch Tab
-        function switchTab(tabName, element) {
-            currentTab = tabName;
-            
-            // Update tab buttons
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            
-            // Find and activate the clicked tab
-            if (element) {
-                element.classList.add('active');
-            } else {
-                // If no element provided, find by tab name
-                const tabs = document.querySelectorAll('.tab');
-                tabs.forEach(tab => {
-                    if (tab.textContent.toLowerCase().includes(tabName)) {
-                        tab.classList.add('active');
-                    }
-                });
-            }
-            
-            // Update tab content
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            document.getElementById(`${tabName}-content`).classList.add('active');
-        }
-
-        // Save Notes
-        function saveNotes() {
-            const notes = document.getElementById('personal-notes').value;
-            const video = courseData[currentVideo];
-            localStorage.setItem(`notes_video_${video.id}`, notes);
-            alert('✅ Notes saved successfully!');
-        }
-
-        // Mark Complete
-        function markComplete() {
-            completedVideos.add(currentVideo);
-            updateProgress();
-            saveProgress();
-            renderVideoList();
-            
-            const completeBtn = document.getElementById('mark-complete-btn');
-            completeBtn.innerHTML = '<span>✓</span><span>Completed</span>';
-            completeBtn.style.background = 'var(--success)';
-            
-            if (completedVideos.size === courseData.length) {
-                setTimeout(() => showCertificate(), 1000);
-            } else {
-                setTimeout(() => {
-                    if (currentVideo < courseData.length - 1) {
-                        nextVideo();
-                    }
-                }, 1500);
-            }
-        }
-
-        // Navigation
-        function nextVideo() {
-            if (currentVideo < courseData.length - 1) {
-                loadVideo(currentVideo + 1);
-            }
-        }
-
-        function previousVideo() {
-            if (currentVideo > 0) {
-                loadVideo(currentVideo - 1);
-            }
-        }
-
-        // Update Buttons
-        function updateButtons() {
-            document.getElementById('prev-btn').disabled = currentVideo === 0;
-            document.getElementById('next-btn').disabled = currentVideo === courseData.length - 1;
-            
-            const isCompleted = completedVideos.has(currentVideo);
-            const completeBtn = document.getElementById('mark-complete-btn');
-            
-            if (isCompleted) {
-                completeBtn.innerHTML = '<span>✓</span><span>Completed</span>';
-                completeBtn.style.background = 'var(--success)';
-            } else {
-                completeBtn.innerHTML = '<span>✓</span><span>Mark as Complete</span>';
-                completeBtn.style.background = '';
-            }
-        }
-
-        // Update Progress
-        function updateProgress() {
-            const progress = Math.round((completedVideos.size / courseData.length) * 100);
-            const progressBar = document.getElementById('progress-bar');
-            progressBar.style.width = progress + '%';
-            progressBar.textContent = progress + '%';
-            
-            document.getElementById('completed-count').textContent = `${completedVideos.size}/${courseData.length} Videos Completed`;
-        }
-
-        // Time Tracking
-        function startTimeTracking() {
-            setInterval(() => {
-                if (document.visibilityState === 'visible') {
-                    timeWatched++;
-                    document.getElementById('time-spent').textContent = `${timeWatched} min watched`;
-                    localStorage.setItem('timeWatched', timeWatched);
-                }
-            }, 60000); // Every minute
-        }
-
-        // Save Progress
-        function saveProgress() {
-            localStorage.setItem('completedVideos', JSON.stringify([...completedVideos]));
-            localStorage.setItem('currentVideo', currentVideo);
-            localStorage.setItem('quizAnswers', JSON.stringify(quizAnswers));
-        }
-
-        // Load Saved Progress
-        function loadSavedProgress() {
-            const saved = localStorage.getItem('completedVideos');
-            if (saved) {
-                completedVideos = new Set(JSON.parse(saved));
-                updateProgress();
-            }
-            
-            const savedQuiz = localStorage.getItem('quizAnswers');
-            if (savedQuiz) {
-                quizAnswers = JSON.parse(savedQuiz);
-            }
-            
-            const savedTime = localStorage.getItem('timeWatched');
-            if (savedTime) {
-                timeWatched = parseInt(savedTime);
-                document.getElementById('time-spent').textContent = `${timeWatched} min watched`;
-            }
-        }
-
-        // Show Certificate
-        function showCertificate() {
-            document.getElementById('certificate-modal').classList.add('active');
-        }
-
-        // Close Modal
-        function closeModal() {
-            document.getElementById('certificate-modal').classList.remove('active');
-        }
-
-        // Download Certificate
-        function downloadCertificate() {
-            alert('🎉 Certificate download feature!\n\nIn a real implementation, this would:\n1. Generate a PDF certificate with student name\n2. Include GyaniDaani Trust branding\n3. Show completion date and course details\n4. Provide a unique certificate ID\n\nFor now, congratulations on completing the course!');
-        }
-
-        // Initialize on load
-        window.onload = init;
-    </script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Gyani Daani Trust. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">A registered charitable trust committed to community welfare</p>
+        </div>
+    </footer>
 </body>
 </html>
