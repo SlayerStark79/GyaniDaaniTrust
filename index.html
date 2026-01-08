@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyani Daani Trust - Empowering Communities</title>
+    <title>Affiliate Marketing Mastery - Complete Course</title>
     <style>
         * {
             margin: 0;
@@ -13,442 +13,954 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
 
         /* Header */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 120px 2rem 80px;
-            text-align: center;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            animation: fadeInUp 1s ease 0.2s backwards;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 1s ease 0.4s backwards;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        /* About Section */
-        .about {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 2rem;
+            padding: 30px 40px;
             text-align: center;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
 
-        .about-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .about-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .about-card h3 {
-            color: #764ba2;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        /* Impact Section */
-        .impact {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 80px 2rem;
-            text-align: center;
-        }
-
-        .impact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .stat-card {
-            background: rgba(255,255,255,0.15);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
+        .header p {
+            font-size: 1.2em;
             opacity: 0.9;
         }
 
-        /* Programs Section */
-        .programs {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Progress Bar */
+        .progress-section {
+            background: #f8f9fa;
+            padding: 25px 40px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .programs h2 {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 3rem;
-            text-align: center;
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
 
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+        .progress-header h3 {
+            color: #333;
         }
 
-        .program-card {
-            background: white;
+        .progress-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            position: relative;
         }
 
-        .program-card:hover {
-            transform: translateY(-10px);
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
         }
 
-        .program-icon {
+        /* Main Content Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            min-height: 600px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: #f8f9fa;
+            border-right: 1px solid #e0e0e0;
+            padding: 30px 20px;
+            overflow-y: auto;
+            max-height: 800px;
+        }
+
+        .sidebar h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .video-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .video-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-item.active {
+            border-color: #667eea;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 3rem 2rem;
-            font-size: 3rem;
+        }
+
+        .video-item.completed::after {
+            content: '✓';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 25px;
+            background: #10b981;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .video-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
             text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
         }
 
-        .program-content {
-            padding: 2rem;
-        }
-
-        .program-content h3 {
-            color: #764ba2;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: #f8f9fa;
-            padding: 80px 2rem;
-            text-align: center;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
+        .video-item.active .video-number {
+            background: white;
             color: #667eea;
-            margin-bottom: 2rem;
         }
 
-        .contact-info {
-            max-width: 600px;
-            margin: 2rem auto;
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .video-duration {
+            font-size: 0.85em;
+            opacity: 0.7;
+        }
+
+        /* Video Player Section */
+        .video-section {
+            padding: 40px;
+            overflow-y: auto;
+            max-height: 800px;
+        }
+
+        .video-header {
+            margin-bottom: 25px;
+        }
+
+        .video-header h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .video-meta {
+            display: flex;
+            gap: 20px;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .video-player {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder {
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .video-placeholder h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .video-placeholder p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px auto;
+        }
+
+        .play-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 25px;
+            border-color: transparent transparent transparent white;
+            margin-left: 5px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab {
+            padding: 12px 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            color: #666;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            color: #667eea;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Transcript */
+        .transcript {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .transcript h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .transcript h4 {
+            color: #333;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        /* Resources */
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .resource-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .resource-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .resource-card h4 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .resource-card p {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .download-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #764ba2;
+        }
+
+        /* Quiz Section */
+        .quiz {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .quiz-question {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-question h4 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .quiz-options {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 10px;
         }
 
-        .contact-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        .quiz-option {
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .contact-item strong {
-            color: #764ba2;
-            display: block;
-            margin-bottom: 0.5rem;
+        .quiz-option:hover {
+            border-color: #667eea;
+            background: #f8f9fa;
         }
 
-        /* Footer */
-        footer {
-            background: #2d3436;
+        .quiz-option.selected {
+            border-color: #667eea;
+            background: #eff6ff;
+        }
+
+        .quiz-option.correct {
+            border-color: #10b981;
+            background: #d1fae5;
+        }
+
+        .quiz-option.incorrect {
+            border-color: #ef4444;
+            background: #fee2e2;
+        }
+
+        .submit-quiz {
+            background: #667eea;
             color: white;
-            padding: 2rem;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .submit-quiz:hover {
+            background: #764ba2;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #764ba2;
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Certificate */
+        .certificate {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
             text-align: center;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .certificate h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        .certificate-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .sidebar {
+                max-height: none;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
             }
         }
 
-        /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .header h1 {
+                font-size: 1.8em;
             }
 
-            .hero p {
-                font-size: 1.1rem;
+            .video-section {
+                padding: 20px;
             }
 
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .about h2, .programs h2, .impact h2, .contact h2 {
-                font-size: 2rem;
+            .resources {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">Gyani Daani Trust</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Gyani Daani Trust</h1>
-            <p>Empowering communities through education, support, and sustainable development</p>
-            <a href="#contact" class="cta-button">Get Involved</a>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎓 Affiliate Marketing Mastery</h1>
+            <p>Complete 5-Part Video Series for Students & Educators</p>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>Who We Are</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem; color: #666;">
-            Gyani Daani Trust is dedicated to creating positive change in communities through compassionate action and sustainable initiatives. We believe in empowering individuals to reach their full potential.
-        </p>
-        <div class="about-content">
-            <div class="about-card">
-                <h3>Our Mission</h3>
-                <p>To create lasting impact through education, empowerment, and community development initiatives that transform lives.</p>
-            </div>
-            <div class="about-card">
-                <h3>Our Vision</h3>
-                <p>A world where every individual has access to opportunities that enable them to thrive and contribute to society.</p>
-            </div>
-            <div class="about-card">
-                <h3>Our Values</h3>
-                <p>Compassion, integrity, transparency, and commitment to excellence in everything we do for the community.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section id="impact" class="impact">
-        <h2>Our Impact</h2>
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-number">1000+</div>
-                <div class="stat-label">Lives Touched</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Communities Served</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">25+</div>
-                <div class="stat-label">Active Programs</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Commitment</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section id="programs" class="programs">
-        <h2>Our Programs</h2>
-        <div class="program-grid">
-            <div class="program-card">
-                <div class="program-icon">📚</div>
-                <div class="program-content">
-                    <h3>Education Support</h3>
-                    <p>Providing quality education and learning resources to underprivileged children and youth.</p>
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="progress-header">
+                <h3>Your Progress</h3>
+                <div class="progress-stats">
+                    <span id="completed-count">0/5 Videos Completed</span>
+                    <span id="time-spent">0 min watched</span>
                 </div>
             </div>
-            <div class="program-card">
-                <div class="program-icon">🤝</div>
-                <div class="program-content">
-                    <h3>Community Development</h3>
-                    <p>Building stronger communities through collaborative initiatives and sustainable programs.</p>
-                </div>
-            </div>
-            <div class="program-card">
-                <div class="program-icon">💡</div>
-                <div class="program-content">
-                    <h3>Skill Training</h3>
-                    <p>Empowering individuals with practical skills and vocational training for better livelihoods.</p>
-                </div>
-            </div>
-            <div class="program-card">
-                <div class="program-icon">❤️</div>
-                <div class="program-content">
-                    <h3>Social Welfare</h3>
-                    <p>Supporting vulnerable communities with essential resources and care services.</p>
-                </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-bar" style="width: 0%">0%</div>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
-            Join us in making a difference. Your support can change lives.
-        </p>
-        <div class="contact-info">
-            <div class="contact-item">
-                <strong>Email</strong>
-                info@gyanidaanitrust.org
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2>📚 Course Content</h2>
+                <div id="video-list"></div>
             </div>
-            <div class="contact-item">
-                <strong>Phone</strong>
-                +91 XXXXX XXXXX
-            </div>
-            <div class="contact-item">
-                <strong>Address</strong>
-                [Your Trust Address]<br>
-                [City, State, PIN Code]
-            </div>
-            <div class="contact-item">
-                <strong>Registration Details</strong>
-                80G & 12A Registered Trust
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Gyani Daani Trust. All rights reserved.</p>
-            <p style="margin-top: 1rem; opacity: 0.8;">A registered charitable trust committed to community welfare</p>
+            <!-- Video Section -->
+            <div class="video-section">
+                <div class="video-header">
+                    <h2 id="current-video-title">Introduction to Affiliate Marketing</h2>
+                    <div class="video-meta">
+                        <span>⏱️ <span id="video-duration">20 minutes</span></span>
+                        <span>📊 Video <span id="video-number">1</span> of 5</span>
+                    </div>
+                </div>
+
+                <!-- Video Player -->
+                <div class="video-player" id="video-player">
+                    <div class="video-placeholder">
+                        <h3>🎬 Video Player</h3>
+                        <p>Replace this placeholder with your actual video embed</p>
+                        <p style="font-size: 0.9em; opacity: 0.7;">Use YouTube, Vimeo, or host your own video file</p>
+                        <div class="play-button" onclick="alert('Add your video embed code here!')"></div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('overview')">📋 Overview</button>
+                    <button class="tab" onclick="switchTab('transcript')">📝 Transcript</button>
+                    <button class="tab" onclick="switchTab('resources')">📦 Resources</button>
+                    <button class="tab" onclick="switchTab('quiz')">✅ Quiz</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="overview-content" class="tab-content active">
+                    <div class="transcript">
+                        <h3>What You'll Learn</h3>
+                        <p id="overview-text"></p>
+                    </div>
+                </div>
+
+                <div id="transcript-content" class="tab-content">
+                    <div class="transcript" id="transcript-text"></div>
+                </div>
+
+                <div id="resources-content" class="tab-content">
+                    <div class="resources">
+                        <div class="resource-card">
+                            <div class="resource-icon">📄</div>
+                            <h4>Transcript PDF</h4>
+                            <p>Full written transcript of this video</p>
+                            <button class="download-btn">Download</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📊</div>
+                            <h4>Slides</h4>
+                            <p>Presentation slides in PDF format</p>
+                            <button class="download-btn">Download</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">📝</div>
+                            <h4>Workbook</h4>
+                            <p>Exercises and action items</p>
+                            <button class="download-btn">Download</button>
+                        </div>
+                        <div class="resource-card">
+                            <div class="resource-icon">🔗</div>
+                            <h4>Resource Links</h4>
+                            <p>All tools and websites mentioned</p>
+                            <button class="download-btn">Download</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-content" class="tab-content">
+                    <div class="quiz" id="quiz-container"></div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousVideo()">← Previous Video</button>
+                    <button class="btn btn-primary" id="mark-complete-btn" onclick="markComplete()">Mark as Complete</button>
+                    <button class="btn btn-primary" id="next-btn" onclick="nextVideo()">Next Video →</button>
+                </div>
+            </div>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+
+    <script>
+        // Course Data
+        const courseData = [
+            {
+                id: 1,
+                title: "Introduction to Affiliate Marketing",
+                duration: "20 min",
+                overview: "Learn the fundamentals of affiliate marketing, understand the three main players (Merchant, Affiliate, Customer), explore different commission models (PPS, PPC, PPL, Recurring), and discover why this business model is perfect for students and educators. By the end of this video, you'll understand the complete ecosystem and know if affiliate marketing is right for you.",
+                videoUrl: "", // Add your video URL here
+                quiz: [
+                    {
+                        question: "What is affiliate marketing?",
+                        options: [
+                            "A performance-based business model where you earn commissions",
+                            "Creating your own products to sell",
+                            "Running a traditional retail store",
+                            "Social media advertising only"
+                        ],
+                        correct: 0
+                    },
+                    {
+                        question: "Who are the three main players in affiliate marketing?",
+                        options: [
+                            "Buyer, Seller, Platform",
+                            "Merchant, Affiliate, Customer",
+                            "Creator, Marketer, Consumer",
+                            "Brand, Influencer, Follower"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "What does PPS stand for?",
+                        options: [
+                            "Pay Per Service",
+                            "Product Promotion System",
+                            "Pay Per Sale",
+                            "Profit Per Session"
+                        ],
+                        correct: 2
+                    }
+                ]
+            },
+            {
+                id: 2,
+                title: "Choosing Your Niche & Programs",
+                duration: "20 min",
+                overview: "Master the art of niche selection using the 3-part framework: Passion, Profitability, and Positioning. Learn how to validate your niche idea, discover different types of affiliate programs (Direct, Networks, Marketplaces), and evaluate programs using key criteria like commission structure, cookie duration, and payment terms.",
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What are the three parts of the niche selection framework?",
+                        options: [
+                            "Price, Product, Promotion",
+                            "Passion, Profitability, Positioning",
+                            "People, Process, Performance",
+                            "Planning, Production, Publishing"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "Which niche approach is recommended?",
+                        options: [
+                            "As broad as possible to reach everyone",
+                            "As narrow as possible for specialization",
+                            "The sweet spot - not too broad, not too narrow",
+                            "Multiple unrelated niches at once"
+                        ],
+                        correct: 2
+                    }
+                ]
+            },
+            {
+                id: 3,
+                title: "Building Platform & Creating Content",
+                duration: "20 min",
+                overview: "Choose your primary platform (Blog, YouTube, Instagram, TikTok, Podcast) and learn the hub-and-spoke multi-platform strategy. Discover high-converting content types including product reviews, comparisons, tutorials, and best-of lists. Master content creation best practices and develop a sustainable content planning system.",
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What is the hub-and-spoke model?",
+                        options: [
+                            "Your website is the hub, social media are spokes",
+                            "Social media is the hub, website is a spoke",
+                            "All platforms are equal",
+                            "Focus only on one platform"
+                        ],
+                        correct: 0
+                    },
+                    {
+                        question: "What's the recommended content mix?",
+                        options: [
+                            "100% promotional content",
+                            "50% evergreen, 50% timely",
+                            "80% evergreen, 20% timely",
+                            "All timely trending content"
+                        ],
+                        correct: 2
+                    }
+                ]
+            },
+            {
+                id: 4,
+                title: "Driving Traffic & Building Audience",
+                duration: "20 min",
+                overview: "Master multiple traffic sources including organic search (SEO), social media strategies for each platform, email list building with lead magnets, and paid advertising basics. Learn how to create sustainable growth through consistent traffic generation and audience relationship building.",
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What traffic source provides the highest ROI?",
+                        options: [
+                            "Paid advertising",
+                            "Social media",
+                            "Email marketing",
+                            "Cold calling"
+                        ],
+                        correct: 2
+                    },
+                    {
+                        question: "When should you start building an email list?",
+                        options: [
+                            "After reaching 10,000 followers",
+                            "From day one",
+                            "Only when you have products",
+                            "After making your first sale"
+                        ],
+                        correct: 1
+                    }
+                ]
+            },
+            {
+                id: 5,
+                title: "Optimization & Scaling Your Business",
+                duration: "20 min",
+                overview: "Learn to track essential metrics and use analytics for data-driven decisions. Master A/B testing strategies for headlines, CTAs, and content structure. Discover conversion rate optimization techniques, scaling strategies including outsourcing and automation, legal compliance requirements, and how to build long-term sustainable success.",
+                videoUrl: "",
+                quiz: [
+                    {
+                        question: "What should you test in A/B testing?",
+                        options: [
+                            "Multiple variables at once for faster results",
+                            "One variable at a time for clear insights",
+                            "Only colors and fonts",
+                            "Everything randomly"
+                        ],
+                        correct: 1
+                    },
+                    {
+                        question: "When should you consider hiring help?",
+                        options: [
+                            "Immediately when starting",
+                            "When earning consistent $1,000+/month",
+                            "Never, do everything yourself",
+                            "After one successful month"
+                        ],
+                        correct: 1
+                    }
+                ]
+            }
+        ];
+
+        // State Management
+        let currentVideo = 0;
+        let completedVideos = new Set();
+        let currentTab = 'overview';
+
+        // Initialize
+        function init() {
+            renderVideoList();
+            loadVideo(0);
+            updateProgress();
+            loadSavedProgress();
+        }
+
+        // Render Video List
+        function renderVideoList() {
+            const videoList = document.getElementById('video-list');
+            videoList.innerHTML = courseData.map((video, index) => `
+                <div class="video-item ${index === currentVideo ? 'active' : ''} ${completedVideos.has(index) ? 'completed' : ''}" 
+                     onclick="loadVideo(${index})">
+                    <span class="video-number">${video.id}</span>
+                    <div>
+                        <div class="video-title">${video.title}</div>
+                        <div class="video-duration">⏱️ ${video.duration}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Load Video
+        function loadVideo(index) {
+            currentVideo = index;
+            const video = courseData[index];
+            
+            document.getElementById('current-video-title').textContent = video.title;
+            document.getElementById('video-duration').textContent = video.duration;
+            document.getElementById('video-number').textContent = video.id;
+            document.getElementById('overview-text').textContent = video.overview;
+            
+            renderVideoList();
+            renderQuiz();
+            updateButtons();
+            switchTab('overview');
+            
+            // Scroll to top
+            document.querySelector('.video-section').scrollTo(0, 0);
+        }
+
+        // Render Quiz
+        function renderQuiz() {
+            const video = courseData[currentVideo];
+            const quizContainer = document.getElementById('quiz-container');
+            
+            if (!video.quiz || video.quiz.length === 0) {
+                quizContainer.innerHTML = '<p>No quiz available for this video.</p>';
+                return;
+            }
+
+            quizContainer.innerHTML = `
+                ${video.quiz.map((q, qIndex) => `
+                    <div class="quiz-question">
+                        <h4>Question ${qIndex + 1}: ${q.question}</h4>
+                        <div class="quiz-options">
+                            ${q.options.map((option, oIndex) => `
+                                <div class="quiz-option" onclick="selectOption(${qIndex}, ${oIndex})" data-question="${qIndex}" data-option="${oIndex}">
+                                    ${option}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `).join('')}
+                <button class="submit-quiz" onclick="submitQuiz()">Submit Quiz</button>
+            `;
+        }
+
+        // Select Quiz Option
+        function selectOption(questionIndex, optionIndex) {
+            const options = document.querySelectorAll(`[data-question="${questionIndex}"]`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optionIndex].classList.add('selected');
+        }
+
+        // Submit Quiz
+        function submitQuiz() {
+            const video = courseData[currentVideo];
+            let correct = 0;
+            
+            video.quiz.forEach((q, qIndex) => {
+                const selected = document.querySelector(`[data-question="${qIndex}"].selected`);
+                if (selected) {
+                    const optionIndex = parseInt(selected.dataset.option);
+                    const options = document.querySelectorAll(`[data-question="${qIndex}"]`);
+                    
+                    if (optionIndex === q.correct) {
+                        options[optionIndex].classList.add('correct');
+                        correct++;
+                    } else {
+                        options[optionIndex].classList.add('incorrect');
+                        options[q.correct].classList.add('correct');
+                    }
+                }
+            });
+            
+            const score = Math.round((correct / video.quiz.length) * 100);
+            alert(`Quiz Complete!\n\nYour Score: ${score}%\nCorrect: ${correct}/${video.quiz.length}\n\n${score >= 70 ? '🎉 Great job!' : '📚 Review the material and try again!'}`);
+            
+            if (score >= 70) {
+                markComplete();
+            }
+        }
+
+        // Switch Tab
+        function switchTab(tabName) {
+            currentTab = tabName;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event?.target?.classList.add('active');
+            
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`${tabName}-content`).classList.add('active');
+        }
+
+        // Mark Complete
+        function markComplete() {
+            completedVideos.add(currentVideo);
+            updateProgress();
+            saveProgress();
+            renderVideoList();
+            
+            if (completedVideos.size === courseData.length) {
+                showCertificate();
+            } else {
+                nextVideo();
+            }
+        }
+
+        // Navigation
+        function nextVideo() {
+            if (currentVideo < courseData.length - 1) {
+                loadVideo(currentVideo + 1);
+            }
+        }
+
+        function previousVideo() {
+            if (currentVideo > 0) {
+                loadVideo(currentVideo - 1);
+            }
+        }
+
+        // Update Buttons
+        function updateButtons() {
+            document.getElementById('prev-btn').disabled = currentVideo === 0;
+            document.getElementById('next-btn').disabled = currentVideo === courseData.length - 1;
+            
+            const isCompleted = completedVideos.has(currentVideo);
+            const completeBtn = document.getElementById('mark-complete-btn');
+            completeBtn.textContent = isCompleted ? '✓ Completed' : 'Mark as Complete
